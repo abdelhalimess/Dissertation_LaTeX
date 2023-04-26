@@ -1,0 +1,9 @@
+Computer science has revolutionized the way we live, work, and interact with each other. With the increasing popularity of the internet, web development has become an essential component of computer science. Web development involves designing, creating, and maintaining websites and web applications, which are accessible through the internet.
+
+Web applications have become an integral part of our daily lives, from social media platforms to e-commerce websites, online banking, and more, web applications are truly indispensable today. They provide us with the convenience of accessing services and information from anywhere and at any time. They have also enabled businesses to reach a wider audience and provide their customers with better services.
+
+In this dissertation, we will discuss a web application that we have developed to help a certain enterprise manage its appointments. The web application is built using Laravel and Vue.js, two popular web development frameworks. The application allows users to book appointments online, view available time slots, and receive notifications and reminders for their appointments.
+
+We will discuss the development process of the web application, including the tools and technologies used, the database design, the user interface design, and the security features implemented. We will also evaluate the performance and usability of the web application and discuss the challenges faced during the development process.
+
+Overall, this dissertation aims to provide an overview of the development of a web application and showcase the importance of web development in computer science.

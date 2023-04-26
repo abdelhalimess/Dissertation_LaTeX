@@ -1,0 +1,13 @@
+CNAS stands for "Caisse Nationale d'Assurance Sociale" which is a national social security institution in Algeria. It is responsible for managing and administering the social security system in Algeria, including providing social security benefits to employees and their dependents, managing social security contributions, and enforcing social security laws and regulations.
+
+The CNAS offers a range of social security benefits to eligible beneficiaries, including healthcare coverage, maternity and paternity benefits, disability benefits, retirement benefits, and survivor benefits. The institution also provides training and education programs to improve the skills and employability of workers in Algeria.
+
+The CNAS is a public institution that operates under the supervision of the Algerian Ministry of Labour and Social Security. Its mandate is to promote social protection and support the economic and social development of Algeria by ensuring the well-being and security of workers and their families.
+
+
+
+chapter 1 : Introduction (GENERAL INTRODUCTION, CURRENT WAITING QUEUE SYSTEM and ITS DRAWBACKS, INTRODUCE OUR APP and ITS FEATURES, TALK ABOUT THE REST OF THE DOCUMENT)
+
+chapter 2 : state of the art (ALL YOU NEED TO KNOW ABOUT CNAS, ITS SERVICES, CURRENT TECH and APPS conclude with WAITING QUEUE so WE CAN ADDRESS WHAT IMPROVEMENTS OUR APP IS MAKING) 
+
+chapter 3 : implementation (TECHNOLOGIES USED "Laravel and Vue.Js , ARCHITECTURE, DATABASE, CODE, SCREENSHOTS, EVALUATION, CONCLUSION )
