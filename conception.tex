@@ -13,30 +13,26 @@ The overall system architecture of the virtual counter for CNAS is designed to b
 \section{Diagrams illustrating the different components of the system}
 Diagrams can help to provide a visual representation of the different components and processes involved in the virtual counter system, making it easier to understand and communicate to stakeholders.
 
-\medskip The use of UML (Unified Modeling Language) which is a standered Language for visualizing and creating views to illustrate the different parts of a system , presented us with a various types of daigrams that facilitated the conception phase for the virtual counter and made it more comprehensive .  
+\medskip The use of UML (Unified Modeling Language) which is a standered Language for visualizing and creating views to illustrate the different parts of a system , presenting us with a various types of diagrams that facilitates the conception phase for the virtual counter and makes it more comprehensive .  
 
 \subsection{Use case diagram}
-Use case diagram is one of the most used static diagrams in UML , it consist on explaining the different actions preformed by the user and helps understanding the main functions that can be preformed by the syteme .  
+Use case diagram is one of the most used static diagrams in UML , it consist on explaining the different actions preformed by the user and helps understanding the main functions that can be preformed by the system.  
 
-For instence , In case of a client interacting with the system , the virtual counter gives him access to consult the planing of the appointments without the need to log in excluding the possibility of booking an appointment . 
+When the user is interacting with the system, the virtual counter enables him to consult the various services provided  by CNAS without the need to log in. 
  
- In addition , the client can do sevral tasks as choosing a service and fill the questionnaire related to the service , the client can at any time cancel the process and print a PDF file that contains the papers he will need to submit , or continue the prosses where he will be showen a table that contains the empty slots where he can simply choose the time and day he wishes to treat his demande , accompanied with a document that proves the booking . The diagram is showen in the figure 2.1 .
-
- \medskip In the second hand of the virtual counter , the employee as well the supervisor have thier own interaction with the system , in thier case they both have to be loged in in order to access the different functionalities of the system , they can both manage the appointments such as treat it and update the queue besides managing thier work flow . 
+ Additionally, the user can also complete a variety of tasks, such as selecting a service and completing a questionnaire related to that service. The system will then generate a checklist of the documents he will need to submit. The user can stop at printing that checklist or he can move on to booking an appointment which will require him to be authenticated. When an appointment is booked, an appointment ticket, that contains the previous checklist along with some appointment details such as the date and time, the counter number and the name of the employee responsible for treating your concerns,  will be available to print. 
+ 
+ \medskip In the second hand of the virtual counter, both the employee and the supervisor have their own interactions with the system; however, in both their cases, they both need to be logged in order to access the various functionalities of the system. In addition to managing their work flow, both can manage the appointments by treating them and updating the queue. 
+\newpage
+ \medskip Here is the diagram:
 
  \begin{figure}[H]
     \centering
-    \includegraphics[width=0.90\textwidth]{useCase_client.PNG}
-    \caption{Use case diagram for client }
-    \label{fig:Client use case diagram }
+    \includegraphics[width=0.90\textwidth]{useCASE.png}
+    \caption{Use case diagram}
+    \label{ucdiagram}
  \end{figure}
- \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.90\textwidth]{useCase_supervisor.PNG}
-  \caption{Use case diagram for supervisor and employee }
-  \label{fig:employee/supervisor use case diagram }
-\end{figure}
-
+ 
 \subsection{Class diagram}
 Class diagram is one of the static diagrams used to illustrate the overall architecture of the classes utilized in the application , it helps developers to capture the global planing of the project in which  will simplify the development in the first phases and the maintenance in the final product . 
 
