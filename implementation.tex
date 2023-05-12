@@ -88,45 +88,342 @@ GitHub provides powerful features that enable seamless collaboration and effecti
 \medskip \textbf{SCREENSHOTS : ISSUES, Pull requests and code reviews, project boards, Commenting..}
 \subsection{Conclusion}
 In this section, we explored the implementation of GitHub as a powerful collaboration and version control tool for our project. We discussed the setup and configuration process, essential commands for managing repositories, and the benefits of using GitHub for collaboration and teamwork. By leveraging GitHub's features such as branch management, pull requests, issue tracking, and project boards, we have enhanced our team's productivity and streamlined our development process. The use of GitHub has enabled us to effectively collaborate, track changes, and ensure the integrity of our codebase. With its robust features and user-friendly interface, GitHub has become an indispensable tool for our project's success.
-\section {Laravel implementation}
+\section{Introduction to Laravel framework}
+Laravel is one of the most well known web frameworks that is used widely among developers, it is an open-source PHP based framework that uses MVC (Modal-View-Controller) Architecture and offers various tool and features that allows developers to build high-quality applications with such an efficiency and quickness. 
+
+\medskip Benefits of using Laravel for web development:
+\begin{itemize}
+
+\item \textbf{Expressive syntax: }Laravel offers an expressive and readable syntax that simplifies the process of writing code. It provides a wide range of functions and shortcuts that allow developers to accomplish complex tasks with minimal effort.
+
+\item \textbf{MVC architecture: }Laravel follows the Model-View-Controller (MVC) architectural pattern, which promotes separation of concerns and enhances code organization. This architectural approach enables developers to create modular and maintainable applications.
+
+\item \textbf{Powerful ORM: }Laravel's Eloquent ORM (Object-Relational Mapping) simplifies database operations by providing an intuitive and fluent interface to interact with databases. It allows developers to work with database records as objects, making database management and querying a breeze.
+
+\item \textbf{Robust routing system: }Laravel's routing system allows developers to define clean and flexible routes for their web applications. It supports various HTTP methods, route parameters, and route grouping, making it easy to handle complex URL structures.
+
+\item \textbf{Blade templating engine: }Laravel's Blade templating engine offers a concise and powerful way to create dynamic views. It provides features like template inheritance, control structures, and reusable components, enabling developers to build modular and reusable UI components.
+
+\item \textbf{Authentication and authorization: }Laravel simplifies user authentication and authorization processes with built-in functionalities. It provides secure user registration, login, and password reset mechanisms, as well as fine-grained access control using gates and policies.
+
+\item \textbf{Rich ecosystem and community support: }Laravel has a vibrant and active community of developers who contribute to its growth. The framework benefits from a vast ecosystem of packages and libraries that extend its capabilities, allowing developers to leverage existing solutions and accelerate development.
+
+\item \textbf{Testing and debugging tools: }Laravel provides robust testing and debugging tools that help developers ensure the quality and reliability of their applications. It supports unit testing, feature testing, and includes convenient debugging tools for efficient troubleshooting.
+\end{itemize}
+
+\medskip Overall, Laravel is an excellent choice for building web applications of any size and complexity, the choice of implementing this particular framework has been proven to be a wise decision, and that's due to its powerful set of tools an features that enabled us to create a robust and scalable web application that meets the needs of CNAS and its users. 
+\section{Laravel implementation}
+\subsection{Installation and setup}
+In this section we will discuss the installation guide for laravel and its different components. In order to install and setup laravel correctly and without any issues, there is some requirements needs to be fulfilled in case of not using the homestead virtual machine. 
+
+\medskip These requirements are 
+\begin{itemize}
+    \item PHP version 7.2.5 or greater. 
+    \item BCMath PHP Extension
+    \item Ctype PHP Extension
+    \item Fileinfo PHP extension
+    \item JSON PHP Extension
+    \item Mbstring PHP Extension
+    \item OpenSSL PHP Extension
+    \item PDO PHP Extension
+    \item Tokenizer PHP Extension
+    \item XML PHP Extension
+\end{itemize}
+ \medskip If the previous requirements are validated, we then move on to the installation guide for laravel, to do so it is highly recommended to follow the steps listed.
+ \begin{enumerate}
+\item \textbf{Install Laravel and its dependencies:}
+  
+Ensure that you have PHP installed on your system. Laravel requires PHP 7.4 or higher.
+  
+Install Composer, a dependency manager for PHP, if you haven't already. Composer is used to install Laravel and manage its dependencies.
+  Open a terminal or command prompt and run the following command to install Laravel globally on your system:
+   \begin{verbatim}
+    composer global require laravel/installer
+   \end{verbatim}
+   
+
+\item \textbf{Configure the development environment:}
+  
+Laravel requires a web server and a database to run. You can use popular web servers like Apache or Nginx, along with databases like MySQL or SQLite.
+  
+Ensure that your web server and database server are properly installed and configured. If needed, consult their respective documentation for installation and setup instructions.
+\newpage
+\item \textbf{Initialize a new Laravel project:}
+ 
+Once Laravel is installed and your development environment is set up, you can create a new Laravel project.
+  
+Open a terminal or command prompt and navigate to the directory where you want to create your project.
+  Run the following command to create a new Laravel project:
+   \begin{verbatim}
+    laravel new your-project-name 
+   \end{verbatim}
+   
+   Replace "your-project-name" with the desired name for your project. This command will create a new directory with the specified project name and install the necessary files and dependencies.
+
+\item \textbf{Test your installation:}
+  
+Change into the project directory:
+\begin{verbatim}
+    cd your-project-name
+\end{verbatim}
+   
+Start the local development server by running the following command:
+\begin{verbatim}
+    php artisan serve
+\end{verbatim}
+  By default, the development server will start on (\url{http://localhost:8000}) 
+  
+  Open your web browser and visit that URL. If you see the Laravel welcome page, it means your installation was successful. 
+  \item \textbf{PHP configuration:}
+  
+  Open the PHP configuration file (php.ini) on your system. The location of this file may vary depending on your operating system and PHP installation.
+ 
+  Ensure that the following PHP extensions are enabled by uncommenting their respective lines (remove the semicolon ";" at the beginning of the line if present):
+ \begin{verbatim}
+    extension=fileinfo
+    extension=openssl
+    extension=pdo_mysql
+ \end{verbatim}
+ \newpage
+ \item \textbf{Creating the ".env " file :}
+
+ Laravel comes with a `.env.example' file by default. 
+ \begin{itemize}
+    \item 
+    Make a copy of this file and rename it to `.env' by running the following command:
+    \begin{verbatim}
+       cp .env.example .env 
+    \end{verbatim}
+    \item Setting up the environment variables:
+     
+    Open the `.env' file in a text editor.
+
+    Update the variables according to your development environment. For example, you might need to set the database credentials:
+\begin{verbatim}
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_database_username
+    DB_PASSWORD=your_database_password
+\end{verbatim}
+
+You can also configure other variables like the application URL, mail settings, caching drivers, and more. Refer to the comments in the `.env.example' file or Laravel's documentation for more information on available options.
+\end{itemize}
+\item \textbf{Generating the application key: }
+
+Laravel requires an application key for secure encryption and other purposes. 
+
+Run the following command to generate the key:
+\begin{verbatim}
+php artisan key:generate
+\end{verbatim}
+\item \textbf{Protecting sensitive information:}
+
+   Ensure that the .env file is not publicly accessible. It should be kept outside of your version control system or any public directories.
+    
+   If you deploy your application to a production server, you may need to set the environment variables directly on the server or through the server's configuration management tools.
+ \end{enumerate}
+\subsection{Laravel directory structure}
+
+In a Laravel project, the directory structure is designed to provide a clear organization for your application's files. Understanding the key directories and files will help you navigate and manage your Laravel project effectively. Here's an explanation of the purpose of each directory and some important files:
+\begin{itemize}
+    \item \textbf{app:}
+        Contains the core application code, including controllers, models, and other PHP classes specific to your application's domain logic.
+
+    \item \textbf{bootstrap:}
+        Contains the files responsible for bootstrapping the Laravel framework and initializing the application environment.
+
+    \item \textbf{config:}
+        Contains configuration files for various aspects of your application, such as database connections, caching, mail settings, and more.
+
+    \item \textbf{database:}
+        Contains database-related files, including migrations for managing database schema changes, seeders for populating the database with sample data, and factories for generating test data.
+
+    \item \textbf{public:}
+        The web server's document root should be set to this directory. It contains the entry point for your application (index.php) and serves as the public-facing directory for static assets, such as CSS, JavaScript, and image files.
+
+    \item \textbf{resources:}
+        Contains views, language files, and frontend assets used by your application.
+        views: Contains the Blade templates that define the UI of your application.
+        lang: Contains language files for localization and internationalization.
+        assets: Contains frontend assets, such as CSS, JavaScript, and images, that will be compiled and optimized by Laravel Mix.
+
+    \item \textbf{routes:}
+        Contains route definition files that specify how incoming requests should be handled by your application.
+        web.php: Defines routes for web-based endpoints.
+        api.php: Defines routes for API endpoints.
+        You can create additional route files for organizing routes based on specific functionalities or modules.
+
+    \item \textbf{storage:}
+        Contains files generated by your application, such as logs, cached views, and uploaded files.
+        app: Contains files generated by your application, such as cached config files, logs, and other temporary files.
+        framework: Contains framework-generated files, including cached views, sessions, and routes.
+        logs: Contains log files generated by your application.
+
+    \item \textbf{tests:}
+        Contains test files and directories for automated testing of your application.
+        Feature: Contains feature tests, which test the application's behavior from the user's perspective.
+        Unit: Contains unit tests, which test individual components of your application in isolation.
+
+    \item \textbf{.env:}
+        The environment file that holds environment-specific configuration values for your application.
+        Contains settings such as database connections, mail configurations, and environment variables.
+        It's important to keep this file secure and not expose any sensitive information.
+
+    \item \textbf{composer.json and composer.lock:}
+        These files manage the project's dependencies using Composer, a PHP dependency manager.
+        composer.json lists the project's dependencies and defines autoloading rules.
+        composer.lock locks the versions of the dependencies to ensure consistent installations.
+
+    \item \textbf{artisan:}
+        The command-line interface (CLI) tool for executing various commands within your Laravel application.
+        Allows you to run tasks such as running migrations, generating code, and running tests.
+\end{itemize}
+Understanding the purpose of each directory and file in a Laravel project will help you navigate and locate the appropriate locations for adding or modifying code, configurations, and assets. It's important to maintain the integrity of the directory structure while organizing your code and assets within the appropriate directories.
+\subsection{Routing}
+
+Routing is an essential aspect of web development, and Laravel provides a powerful and flexible routing system. Here's an explanation of routing in Laravel, including how to define routes, work with route parameters, and utilize route grouping and naming.
+
+Routing in Laravel refers to the process of mapping incoming HTTP requests to specific actions or handlers within your application. It determines how different URLs are handled and defines the endpoints through which users can access various functionalities of your application.
+
+In Laravel, routes are typically defined in the `routes` directory, specifically the `web.php` and `api.php` files.
+\begin{enumerate}
+    \item \textbf{Basic route definition:} 
+    
+    A basic route is defined using the `Route` facade's methods, such as `get`, `post`, `put`, `patch`, and `delete`.
+    
+    \medskip Here's an example of a basic route definition:
+    \begin{verbatim}
+        Route::get('/home', function () {
+            return 'Welcome to the home page!';
+            });       
+         \end{verbatim}
+     
+   This route responds to the `GET` request to the `/home` URL and returns the specified message.
+
+ \item \textbf{Route parameters:}
+   You can define routes with parameters that are passed as segments in the URL.
+   
+   \medskip Here's an example of a route with a parameter:
+     \begin{verbatim}
+        
+        Route::get('/users/{id}', function ($id) {
+            return 'User ID: ' . $id;
+            });
+        \end{verbatim}
+
+    This route matches URLs like `/users/1`, `/users/2`, etc., and the parameter `{id}` is passed to the route closure as an argument.
+
+\item \textbf{Route grouping and naming:}
+
+Laravel allows you to group related routes and assign names to them for easy referencing and organization.
+\begin{itemize}
+    \item \textbf{Route grouping:}
+    
+    Route grouping allows you to apply common attributes or middleware to a group of routes.
+    
+    \medskip Here's an example of route grouping with a shared middleware:
+\begin{verbatim}
+    
+        Route::middleware('auth')->group(function () {
+            Route::get('/dashboard', function () {
+                return 'Welcome to the dashboard!';
+                });
+                Route::get('/profile', function () {
+                    return 'Welcome to your profile!';
+                    });
+                    });
+                    
+    \end{verbatim}
+   In this example, the routes `/dashboard` and `/profile` are grouped together and share the `auth` middleware, which ensures that only authenticated users can access them.
+
+    \item \textbf{Route naming:}
+   
+    Assigning names to routes helps in referencing them within your application, such as generating URLs or redirecting to specific routes.
+    
+    \medskip Here's an example of naming routes:
+    \begin{verbatim}
+        
+        Route::get('/posts', function () {
+            return 'List of posts';
+            })->name('posts.index');
+            
+            Route::get('/posts/{id}', function ($id) {
+                return 'Post ID: ' . $id;
+                })->name('posts.show');
+            \end{verbatim}
+                
+            In this example, the routes `/posts` and `/posts/{id}` are named as `posts.index` and `posts.show`, respectively. These names can be used later to generate URLs or redirect to these routes.
+            
+            By understanding and utilizing routing in Laravel, you can define the endpoints for your application, handle various HTTP methods, work with dynamic route parameters, group related routes, and assign names for easy referencing. Laravel's routing system provides the flexibility and convenience required to build robust and maintainable web applications.
+        \end{itemize}
+ \end{enumerate}
+\subsection{Controllers}
+
+Controllers play a crucial role in Laravel applications as they handle the logic and actions associated with different routes. Here's an explanation of creating and using controllers in Laravel, defining controller methods and actions, and understanding the separation of concerns between routes and controllers.
+
+The creation of an controller is done by the following artisan command: 
+\begin{verbatim}
+   php artisan make:controller
+\end{verbatim}
+
+For instance, to create the user controller we used the following command: 
+\begin{verbatim}
+    php artisan make:controller UserController 
+\end{verbatim}
+
+This command will generate a new `UserController` class in the `app/Http/Controllers` directory. 
+\subsection{Views and Blade templates}
 //
-\subsection {Overview of the Laravel framework}
+        
+\subsection{Models and Eloquent ORM}
 //
-\subsection {Explanation of the different components of the system implemented using Laravel}
+\subsection{Database Migrations and Seeders}
 //
-\subsection {Code snippets and screenshots to illustrate the implementation details}
+\subsection{Form Handling and Validation}
 //
-\subsection {Discussion of the challenges faced and how they were overcome}
+\subsection{Authentication and Authorization}
+//
+\subsection{Middlewares}
+//
+\subsection{Error Handling and Logging}
+//
+\subsection{Testing in Laravel}
+//
+\subsection{Deployment and Production Considerations}
+//
+\subsection{Best Practices and Tips}
+//
+\subsection{Conclusion}
+//
+\section{VueJs implementation}
+//
+\subsection{Overview of the VueJs framework}
+//
+\subsection{Explanation of the different components of the system implemented using VueJs}
+//
+\subsection{Code snippets and screenshots to illustrate the implementation details}
+//
+\subsection{Discussion of the challenges faced and how they were overcome}
+//
+
+
+\section{Integration of Laravel and VueJs}
+//
+\subsection{Explanation of how Laravel and VueJs were integrated to create the final system}
+//
+\subsection{Code snippets and screenshots to illustrate the integration details}
+//
+\subsection{Discussion of the challenges faced and how they were overcome}
 
 //
-
-\section {VueJs implementation}
+    \section{Conclusion}
 //
-\subsection {Overview of the VueJs framework}
+    \subsection{Summary of the key points covered}
 //
-\subsection {Explanation of the different components of the system implemented using VueJs}
+    \subsection{Reflection on the overall implementation process}
 //
-\subsection {Code snippets and screenshots to illustrate the implementation details}
-//
-\subsection {Discussion of the challenges faced and how they were overcome}
-//
-
-
-\section {Integration of Laravel and VueJs}
-//
-\subsection {Explanation of how Laravel and VueJs were integrated to create the final system}
-//
-\subsection {Code snippets and screenshots to illustrate the integration details}
-//
-\subsection {Discussion of the challenges faced and how they were overcome}
-
-//
-    \section {Conclusion}
-//
-    \subsection {Summary of the key points covered}
-//
-    \subsection {Reflection on the overall implementation process}
-//
-    \subsection {Discussion of future work and potential improvements}
+    \subsection{Discussion of future work and potential improvements}
 
     //
