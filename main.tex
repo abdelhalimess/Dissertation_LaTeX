@@ -1,4 +1,5 @@
 \documentclass[12pt]{report}
+\usepackage{lmodern}
 \usepackage{microtype}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -7,12 +8,112 @@
 \usepackage{float}
 \usepackage{indentfirst}
 \usepackage{url}
+\usepackage{amsmath}
 \usepackage[margin=2cm]{geometry}
 \begin{document}
-\title{My Dissertation Title}
-\author{My Name}
-\date{\today}
-\maketitle
+\begin{titlepage}
+    \centering
+    
+    \textbf{\Huge Hassiba Benbouali University}
+    
+    \vspace{0.5cm}
+    
+    \textbf{\LARGE Faculty of Exact Sciences And Informatics}
+    
+    \vspace{1cm}
+    
+    \includegraphics[width=3cm]{university-logo.png}
+    
+    \vspace{2cm}
+    
+    \rule{\linewidth}{1pt} % Horizontal line
+    
+    \vspace{0.5cm}
+    
+    \textbf{\LARGE Dissertation}
+    
+    \vspace{0.5cm}
+    
+    \textbf{\huge CNAS Virtual Counter}
+    
+    \vspace{0.5cm}
+    
+    \rule{\linewidth}{1pt} % Horizontal line
+    
+    \begin{minipage}{0.5\textwidth}
+        \vspace{8cm}
+        \begin{flushleft}
+        \textbf{\Large By}\\
+        \textbf{\Large Abdelhalim Esselami}\\
+        \textbf{\Large Abdelkadir Cheklal}
+        \end{flushleft}
+        \end{minipage}%
+        \begin{minipage}{0.5\textwidth}
+        \vspace{8cm}
+        \begin{flushright}
+        \textbf{\Large Supervisors:}\\
+        \textbf{\Large Walid Kadri}\\
+        \textbf{\Large Abdellatif Esselami}
+        \end{flushright}
+        \end{minipage}
+    
+    \vspace{1cm}
+    
+    \rule{\linewidth}{1pt} % Horizontal line
+    
+    \vfill
+    
+    \textbf{\Large May 2023}
+    
+    \end{titlepage}
+
+        \vspace*{\fill}
+        \section*{\centering Acknowledgment}
+
+        We would like to express our deepest gratitude to our supervisors, Mr. Walid Kadri and Mr. Abdellatif Esselami, for their guidance, support, and valuable insights throughout the duration of this dissertation. Their expertise and encouragement have been instrumental in the successful completion of this work.
+        
+        We are also grateful to our colleagues and friends for their assistance and collaboration during this research. Their contributions and discussions have greatly enriched the outcome of this study.
+        
+        Furthermore, we would like to acknowledge the support provided by the CNAS organization for their cooperation and provision of necessary resources for conducting this research.
+        
+        Finally, we extend our heartfelt appreciation to our families for their unwavering love, encouragement, and understanding throughout this academic journey.
+        
+        \vspace*{\fill}
+        \thispagestyle{empty}
+        \clearpage
+    \begin{abstract}
+        This dissertation presents a comprehensive study on the development and implementation of the CNAS Virtual Counter. The aim of this research is to provide an innovative solution for improving the efficiency and accessibility of counter services in the CNAS organization.
+        
+        The dissertation begins with an analysis of the existing counter system and identifies the limitations and challenges faced by both the organization and its clients. Subsequently, the design and architecture of the CNAS Virtual Counter are presented, highlighting the integration of advanced technologies such as web-based interfaces, real-time communication, and secure data management.
+        
+        A detailed description of the development process is provided, outlining the technologies, frameworks, and methodologies employed. The implementation of key features, including user registration, appointment scheduling, document submission, and online assistance, is thoroughly discussed.
+        
+        To evaluate the effectiveness of the CNAS Virtual Counter, a series of user studies and performance tests are conducted. The results demonstrate significant improvements in service efficiency, reduced waiting times, and enhanced user satisfaction compared to the traditional counter system.
+        
+        Furthermore, the dissertation addresses the security and privacy concerns associated with the virtual counter, presenting a comprehensive framework for data protection and access control. The implementation of encryption, user authentication, and secure storage measures ensures the confidentiality and integrity of sensitive information.
+        
+        Overall, the CNAS Virtual Counter proves to be a successful implementation that offers numerous benefits to both the organization and its clients. The research contributes to the advancement of counter service systems and sets a foundation for future enhancements and expansions.
+        
+        \end{abstract}
+        \begin{center}
+            \vspace*{\fill}
+
+        \section*{\centering \large Resumé}
+            Ce mémoire présente une étude approfondie sur le développement et la mise en œuvre du Guichet Virtuel CNAS. L'objectif de cette recherche est de fournir une solution innovante pour améliorer l'efficacité et l'accessibilité des services de guichet au sein de l'organisation CNAS.
+            
+            La mémoire commence par une analyse du système de guichet existant, identifiant les limitations et les défis auxquels sont confrontés l'organisation et ses clients. Ensuite, la conception et l'architecture du CNAS Virtual Counter sont présentées, mettant en évidence l'intégration de technologies avancées telles que les interfaces web, la communication en temps réel et la gestion sécurisée des données.
+            
+            Une description détaillée du processus de développement est fournie, en décrivant les technologies, les frameworks et les méthodologies utilisées. La mise en œuvre des fonctionnalités clés, notamment l'inscription des utilisateurs, la prise de rendez-vous, la soumission de documents et l'assistance en ligne, est discutée en détail.
+            
+            Pour évaluer l'efficacité du Guichet Virtuel CNAS, une série d'études utilisateurs et de tests de performance sont menés. Les résultats démontrent des améliorations significatives en termes d'efficacité du service, de réduction des temps d'attente et de satisfaction accrue des utilisateurs par rapport au système de guichet traditionnel.
+            
+            De plus, la mémoire aborde les problématiques de sécurité et de confidentialité associées au guichet virtuel, en présentant un cadre complet de protection des données et de contrôle d'accès. La mise en œuvre de mesures telles que le chiffrement, l'authentification des utilisateurs et le stockage sécurisé garantit la confidentialité et l'intégrité des informations sensibles.
+            
+            Dans l'ensemble, le Guichet Virtuel CNAS s'avère être une implémentation réussie offrant de nombreux avantages tant pour l'organisation que pour ses clients. Cette recherche contribue à l'avancement des systèmes de services de guichet et pose les bases pour de futures améliorations et extensions.
+            \vspace*{\fill}
+        \end{center} 
+        \thispagestyle{empty}  
+                    
 \tableofcontents
 \listoffigures
 \listoftables
@@ -20,4 +121,5 @@
 \include{state_of_the_art}
 \include{conception}
 \include{implementation}
+\include{conclusion}
 \end{document}
