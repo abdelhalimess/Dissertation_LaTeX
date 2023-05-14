@@ -21,7 +21,7 @@ Use case diagram is one of the most used static diagrams in UML , it consist on 
 
 When the user is interacting with the system, the virtual counter enables him to consult the various services provided  by CNAS without the need to log in. 
  
- Additionally, the user can also complete a variety of tasks, such as selecting a service and completing a questionnaire related to that service. The system will then generate a checklist of the documents he will need to submit. The user can stop at printing that checklist or he can move on to booking an appointment which will require him to be authenticated. When an appointment is booked, an appointment ticket, that contains the previous checklist along with some appointment details such as the date and time, the counter number and the name of the employee responsible for treating your concerns,  will be available to print. 
+ Additionally, the user can also complete a variety of tasks, such as selecting a service and completing a questionnaire related to that service. The system will then generate a checklist of the documents he will need to submit. The user can stop at printing that checklist or he can move on to booking an appointment which will require him to be authenticated. When an appointment is booked, an appointment ticket, that contains the previous checklist along with some appointment details such as the date and time, the counter number and the name of the employee responsible for treating our concerns,  will be available to print. 
  
  \medskip In the second hand of the virtual counter, both the employee and the supervisor have their own interactions with the system; however, in both their cases, they both need to be logged in order to access the various functionalities of the system. In addition to managing their work flow, both can manage the appointments by treating, rescheduling or canceling them if necessary. 
 \newpage
@@ -82,4 +82,10 @@ We achieved this by carefully analyzing the data requirements of the CNAS virtua
 //
 \subsection{Discussion of the design decisions made}
 
-//
+The database for our web application consists of 18 tables, which are designed to store information related to states, communes, structures, structure\_types, centers, services, counters, users, roles, user\_has\_roles, permissions, role\_has\_permissions, appointments, status, questionnaire, documents, question\_doc, and user\_has\_permission.
+
+The decision to include these tables was  based on the needs of our application and the data that needs to be stored and managed. For example, tables such as states and communes are  included to help with location-based searches or queries, while tables like users and roles are necessary for managing user access and permissions.
+
+The decision to use separate tables for each type of data is a common approach in database design, as it helps to organize the data and makes it easier to manage and query. The use of relational database management systems (RDBMS) such as MySQL allows for efficient and scalable management of large datasets.
+
+Overall, the decisions made regarding the database design for our web application are  based on the specific needs and requirements of our application, as well as best practices in database design and management. By carefully considering the data that needs to be stored and how it will be managed, you can ensure that our web application is efficient, scalable, and capable of delivering the functionality that our users need.
