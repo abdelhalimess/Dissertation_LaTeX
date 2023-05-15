@@ -1,6 +1,23 @@
 \chapter{Implementation}
 \section{Chapter Overview}
-In this chapter, we will delve into the comprehensive implementation details of CNAS's virtual counter system. We will explore the utilization of various cutting-edge technologies that have played a pivotal role in the development process. Firstly, we will highlight the significance of Version Control Tool GitHub, which facilitated seamless collaboration and ensured efficient code management throughout the project. Additionally, we will examine the utilization of the widely acclaimed PHP framework Laravel, known for its robustness and flexibility, which provided a solid foundation for building the web application. Furthermore, we will explore the integration of VueJs, a powerful JavaScript framework, that enabled us to develop an interactive and user-friendly interface. Together, these technologies synergistically contributed to the creation of a highly efficient and functional virtual counter system for CNAS.
+In this chapter, we will delve into the comprehensive implementation details of CNAS's virtual counter system. We will explore the utilization of various cutting-edge technologies that have played a pivotal role in the development process. Firstly, we will highlight the significance of Version Control Tool(VCS) GitHub, which facilitated seamless collaboration and ensured efficient code management throughout the project. Additionally, we will examine the utilization of the widely acclaimed PHP framework Laravel, known for its robustness and flexibility, which provided a solid foundation for building the web application. Furthermore, we will explore the integration of VueJs, a powerful JavaScript framework, that enabled us to develop an interactive and user-friendly interface. Together, these technologies synergistically contributed to the creation of a highly efficient and functional virtual counter system for CNAS.
+\section{Development Tools and Technologies}
+In the development of the virtual counter system, we utilized a set of powerful tools and technologies that contributed to its successful implementation. These tools played a crucial role in enhancing productivity, collaboration, and the overall performance of the system. Let's explore each of them briefly:
+
+\begin{itemize}
+  \item  \includegraphics[height=2em]{Visual_Studio_Code_1.35_icon.svg.png} \textbf{VSCode (Visual Studio Code):} VSCode is a widely acclaimed source code editor known for its versatility and extensive plugin ecosystem. It provides a rich and intuitive development environment, offering features like intelligent code completion, debugging capabilities, and Git integration. Its flexibility and customizability make it a popular choice among developers.
+  
+  \item \includegraphics[height=2em]{github-logo.png} \textbf{GitHub:} GitHub is a web-based platform built on top of Git, enabling effective version control and collaboration. It provides a centralized repository for storing code, managing project milestones, and facilitating seamless collaboration among team members. GitHub's features, such as issue tracking, pull requests, and code reviews, streamline the development workflow and foster efficient teamwork.
+  
+  \item \includegraphics[height=2em]{1200px-Laravel.svg.png} \textbf{Laravel:} Laravel is a robust PHP framework that simplifies the development process by providing an elegant syntax and a wide range of built-in functionalities. With features like routing, ORM (Object-Relational Mapping), and template engine, Laravel enables rapid and scalable web application development. It promotes code reusability and follows the MVC (Model-View-Controller) architectural pattern.
+  
+  \item \includegraphics[height=2em]{Vue.js_Logo_2.svg.png} \textbf{Vue.js:} Vue.js is a progressive JavaScript framework that empowers the creation of interactive and dynamic user interfaces. Its component-based structure promotes code modularity and reusability, allowing for a more organized and maintainable codebase. Vue.js offers features like data binding, declarative rendering, and a rich ecosystem of libraries and plugins.
+  
+  \item \includegraphics[height=2em]{MariaDB_Logo.d8a208f0a889a8f0f0551b8391a065ea79c54f3a.png} \textbf{MariaDB:}  MariaDB is a popular open-source relational database management system derived from MySQL. It provides a reliable and scalable database solution with high performance and robust security features. With its SQL compatibility and extensive support for data manipulation and retrieval, MariaDB serves as the backbone for storing and managing the virtual counter system's data.
+\end{itemize}
+
+These tools and technologies synergistically contribute to the development of a powerful and efficient web-based application, ensuring a seamless User eXperience(UX) and streamlined management of the virtual counter system.
+
 \section{Introduction to Git }
 Software development involves managing a large number of files and assets that undergo frequent changes. As developers, we require a tool that facilitates the administration of these files and ensures consistent updates. This is where Git proves invaluable, providing us with the ability to handle such tasks with ease and flexibility. At its core, Git is a powerful tool that enables multiple individuals to collaborate on the same project while effectively tracking all changes made to the code and files over time.
 \subsection{GitHub implementation}
@@ -730,7 +747,48 @@ Database migrations in Laravel provide a version control system for your databas
 \end{enumerate}   
 \end{enumerate}
 \subsection{Form Handling and Validation}
-//
+Form handling and validation are essential for processing user input in web applications. Laravel provides convenient features for handling form submissions, validating user input, and displaying validation errors. 
+
+\medskip Here's an explanation of form handling and validation in Laravel:
+\begin{itemize}
+    \item \textbf{Handling form submissions in Laravel:}
+\begin{enumerate} 
+    \item \textbf{Defining a form:}
+   - Create an HTML form using the `\textless form\textgreater' element in your view.
+   - Set the form's `action' attribute to the appropriate route that will handle the form submission.
+   - Specify the form's `method' attribute as `POST' to send the form data securely.
+
+   \item \textbf{Route for form submission:}
+   - Define a route that corresponds to the form's `action' attribute.
+   - In the route definition, specify the controller method or closure that will handle the form submission.
+
+   \item \textbf{Processing the form submission:}
+   - In the controller method or closure, you can access the submitted form data using the `request' helper or by type-hinting the \textbf{`Illuminate\textbackslash Http\textbackslash Request'} class.
+   - You can then perform the necessary operations, such as saving data to the database or sending email notifications.
+\end{enumerate} 
+   \item \textbf{Validating user input using Laravel's validation rules:}
+   \begin{enumerate}
+    \item \textbf{Defining validation rules:}
+   - Laravel provides a fluent validation system for validating user input.
+   - In the controller method or closure that handles the form submission, you can define validation rules using the `validate' method.
+   - The validation rules define the expected format and constraints for each form field.
+   - For example, you can specify that a field is required, must be an email, or must be a specific length.
+
+   \item \textbf{Validating the input:}
+   - Call the `validate' method on the incoming request to validate the user input against the defined rules.
+   - If the validation fails, Laravel will automatically redirect back to the form with the validation errors.
+\end{enumerate} 
+   \item \textbf{Displaying validation errors to the user:}
+   \begin{enumerate}
+    \item \textbf{Redirecting back with errors:}
+   - When the validation fails, Laravel will redirect the user back to the form with the validation errors flashed to the session.
+   - You can use the `withErrors' method when redirecting back to store the validation errors in the session.
+
+   \item \textbf{Displaying errors in the view:}
+   - In the form view, you can use the `@error' directive to display specific validation errors for a field.
+   - The `@error' directive checks if there are errors for a given field and displays the corresponding error message if available.
+\end{enumerate} 
+\end{itemize}
 \subsection{Authentication and Authorization}
 Authentication and authorization are crucial aspects of web applications. Laravel provides a comprehensive system for implementing user authentication and managing access control. Here's an explanation of authentication and authorization in Laravel, including user registration, login, logout, and utilizing gates and policies for authorization.
 
@@ -978,7 +1036,8 @@ Components are a fundamental concept in Vue.js that allow you to build reusable 
 
     \item \textbf{Communicating Between Components:}
         Components can communicate with each other using props and events.
-        Props are properties passed from a parent component to a child component, allowing data to be shared and rendered dynamically.
+    \item \textbf{IDE} - Integrated Development Environment
+    Props are properties passed from a parent component to a chverild component, allowing data to be shared and rendered dynamically.
         Events are used to emit custom events from child components to notify parent components about specific actions or changes.
         This parent-child communication enables a unidirectional flow of data and ensures component independence and reusability.
 \end{itemize}
