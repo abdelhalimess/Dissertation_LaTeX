@@ -97,14 +97,13 @@ GitHub provides a powerful set of commands that enable efficient collaboration a
   
     \item \textbf{Pull Request:} The \texttt{git pull request} command is used to propose changes from a branch to be merged into another branch. For example: \texttt{git pull request}.
   \end{itemize}
-  \medskip \textbf{SCREENSHOTS : GIT BASH, VS CODE TERMINAL }
 
   \subsection{Collaboration and Teamwork}
 GitHub provides powerful features that enable seamless collaboration and effective teamwork on software development projects. This section explores the various collaborative capabilities offered by GitHub, allowing multiple developers to work together efficiently and coordinate their efforts. From managing branches and pull requests to resolving conflicts and conducting code reviews, GitHub facilitates a collaborative environment that fosters teamwork and enhances productivity. This section demonstrates how to leverage these collaborative features to streamline the development process and maximize the effectiveness of your team.   
 
-\medskip \textbf{SCREENSHOTS : ISSUES, Pull requests and code reviews, project boards, Commenting..}
 \subsection{Conclusion}
 In this section, we explored the implementation of GitHub as a powerful collaboration and version control tool for our project. We discussed the setup and configuration process, essential commands for managing repositories, and the benefits of using GitHub for collaboration and teamwork. By leveraging GitHub's features such as branch management, pull requests, issue tracking, and project boards, we have enhanced our team's productivity and streamlined our development process. The use of GitHub has enabled us to effectively collaborate, track changes, and ensure the integrity of our codebase. With its robust features and user-friendly interface, GitHub has become an indispensable tool for our project's success.
+\newpage
 \section{Introduction to Laravel framework}
 Laravel is one of the most well known web frameworks that is used widely among developers, it is an open-source PHP based framework that uses MVC (Modal-View-Controller) Architecture and offers various tool and features that allows developers to build high-quality applications with such an efficiency and quickness. 
 
@@ -132,8 +131,10 @@ Laravel is one of the most well known web frameworks that is used widely among d
 \section{Laravel implementation}
 \subsection{Installation and setup}
 In this section we will discuss the installation guide for laravel and its different components. In order to install and setup laravel correctly and without any issues, there is some requirements needs to be fulfilled in case of not using the homestead virtual machine. 
+\cite{laravel} 
 
-\medskip These requirements are 
+\medskip These requirements are: 
+
 \begin{itemize}
     \item PHP version 7.2.5 or greater. 
     \item BCMath PHP Extension
@@ -144,9 +145,7 @@ In this section we will discuss the installation guide for laravel and its diffe
     \item OpenSSL PHP Extension
     \item PDO PHP Extension
     \item Tokenizer PHP Extension
-    \item XML PHP Extension
-\cite{laravel}    
-\footnote{Laravel. Laravel Documentation. Retrieved from \url{https://laravel.com/docs/7.x} }
+    \item XML PHP Extension \footnote{Laravel. Laravel Documentation. Retrieved from \url{https://laravel.com/docs/7.x} }
 \end{itemize}
  \medskip If the previous requirements are validated, we then move on to the installation guide for laravel, to do so it is highly recommended to follow the steps listed.
  \begin{enumerate}
@@ -792,8 +791,9 @@ Form handling and validation are essential for processing user input in web appl
 \end{itemize}
 \subsection{Authentication and Authorization}
 Authentication and authorization are crucial aspects of web applications. Laravel provides a comprehensive system for implementing user authentication and managing access control. Here's an explanation of authentication and authorization in Laravel, including user registration, login, logout, and utilizing gates and policies for authorization.
-
-\textbf{Implementing user authentication in Laravel:}
+\newpage
+\begin{itemize}
+\item \textbf{Implementing user authentication in Laravel:}
 \begin{itemize}
 
 \item \textbf{User model and migration:}
@@ -816,7 +816,7 @@ Authentication and authorization are crucial aspects of web applications. Larave
         Define a route for user logout and link it to a controller method that handles the logout logic.
         In the controller method, use the logout method provided by Laravel's Auth facade to log out the currently authenticated user.
 \end{itemize}
-\textbf{Authorization and access control using gates and policies:}
+\item \textbf{Authorization and access control using gates and policies:}
 \begin{itemize}
     \item \textbf{Gates:}   
         
@@ -833,6 +833,7 @@ Authentication and authorization are crucial aspects of web applications. Larave
         Laravel will automatically map these methods to the appropriate authorization checks based on naming conventions.
         Use the authorize method within your controller methods to perform authorization using the associated policy.
     \end{itemize}
+\end{itemize}    
 \subsection{Middlewares}
 Middleware in Laravel is a powerful feature that allows you to filter HTTP requests and add additional layers of functionality to your application's request lifecycle. Here's an explanation of middleware in Laravel, including an introduction, creating custom middleware, and implementing middleware for authentication, logging, and more.
 \begin{itemize}
