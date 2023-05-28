@@ -1108,7 +1108,8 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
 \subsection{Screenshots Illustrating the Application System}
 
 \bigskip
-
+\begin{itemize}
+    \item \textbf{Superadmin:}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.2\textwidth]{SCREENSHOTS/superadmin/navbar.png}
@@ -1185,32 +1186,56 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
   \end{figure}
   \paragraph{Comment:} The screenshot above displays the list of permissions available in the system. These permissions determine the actions and functionalities that can be accessed by different user roles.
 
-% States List
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/states_communes.png}
-  \caption{Superadmin States List}
-  \label{fig:states-list}
+  % States List
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/states_communes.png}
+    \caption{Superadmin States List}
+    \label{fig:states-list}
 \end{figure}
 \paragraph{Comment:} The states list displays all available states and their relevant information, enabling the superadmin to manage state-related data.
 \newpage
 
 % Communes List
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/communes.png}
+    \centering
+    \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/communes.png}
   \caption{Superadmin Communes List}
   \label{fig:communes-list}
 \end{figure}
 \paragraph{Comment:} The communes list showcases all available communes and their relevant details, allowing the superadmin to manage commune-related data.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/services_questions.png}
+    \caption{Superadmin Services - Questions List}
+    \label{fig:services-list}
+\end{figure}
+\paragraph{Comment:} The screenshot above displays the Services Questions List, which allows users to view and manage the questions related to various services. It provides an organized interface where superadmin can add, edit, or delete questions to gather necessary information from users. This feature enables efficient data collection and improves the overall user experience.
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/documents_list.png}
+    \caption{Superadmin Documents List}
+    \label{fig:documents-list}
+\end{figure}
+\paragraph{Comment:} The screenshot above showcases the Documents List, which provides superadmin with a centralized repository for managing and organizing important documents.
+
+\rule{\linewidth}{1pt}
+
+\vspace{1cm}
+
+\item \textbf{Admin:}
+
+
+\end{itemize}
 
 \newpage
 \section{Conclusion}
 In this chapter, we have explored the integration of Vue.js with Laravel and discussed its benefits in web development. Let's summarize the key points covered:
 \begin{itemize}
     \item Vue.js is a progressive JavaScript framework known for its simplicity, reactivity, component-based architecture, and virtual DOM. It enables the creation of dynamic and interactive user interfaces.
-
+    
     \item Understanding the fundamentals of Vue.js is essential, including components, which are reusable UI elements, and directives and templates, which define the structure and rendering of Vue components.
 
     \item Integrating Vue.js components into Laravel Blade templates allows you to leverage the power of Vue.js within your Laravel applications. You can share data between Laravel and Vue.js components using props and event handling, and build interactive UI elements that respond in real-time without the need for full-page reloads.
