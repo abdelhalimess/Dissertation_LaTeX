@@ -702,22 +702,25 @@ Database migrations in Laravel provide a version control system for your databas
    
    - Open the generated seeder file and use the `run` method to define the data to be inserted into the database.
    - You can use Eloquent models or plain database queries to create and insert records.
-   - Here's an example of a seeder for creating sample users:
+   - Here's an example of a seeder for creating sample Role types:
 \begin{verbatim}
      use Illuminate\Database\Seeder;
      use App\Models\User;
 
-     class UserSeeder extends Seeder
+     class RolesTableSeeder extends Seeder
      {
          public function run()
          {
-             User::create([
-                 'name' => 'John Doe',
-                 'email' => 'john@example.com',
-                 'password' => bcrypt('password')
-             ]);
-
-             // Add more sample user records
+             $roles = [
+                 'superadmin',
+                 'manager',
+                 'admin',
+                 'user',
+                 'superviseur',
+             ];
+             foreach ($roles as $role) {
+                 Role::create(['name' => $role]);
+             }
          }
      }
 \end{verbatim}
@@ -1120,13 +1123,22 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
 \newpage
 
 \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/home.png}
+    \caption{Superadmin home dashboard}
+    \label{fig:home}
+  \end{figure}
+  \paragraph{Comment:} As shown in the screenshot above, the home page allows the superadmin to have an overall statistics on the system.
+
+
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/edit_profile.png}
   \caption{Superadmin Edit Profile}
   \label{fig:edit-profile}
 \end{figure}
 \paragraph{Comment:} The edit profile page allows the superadmin to modify their personal information and settings.
-
+\newpage
 % Users List
 \begin{figure}[htbp]
   \centering
@@ -1135,7 +1147,6 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
   \label{fig:users-list}
 \end{figure}
 \paragraph{Comment:} The users list provides an overview of all registered users, allowing the superadmin to manage user accounts, roles, and permissions.
-\newpage
 
 % Add User
 \begin{figure}[htbp]
@@ -1145,7 +1156,7 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
   \label{fig:add-user}
 \end{figure}
 \paragraph{Comment:} The add user page allows the superadmin to create a new user account by specifying relevant details and assigning appropriate roles and permissions.
-
+\newpage
 % Structure List
 \begin{figure}[htbp]
   \centering
@@ -1154,7 +1165,7 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
   \label{fig:structures-list}
 \end{figure}
 \paragraph{Comment:} The structures list displays all registered structures along with their details and options for management.
-\newpage
+
 
 % Structure Types List
 \begin{figure}[htbp]
@@ -1164,7 +1175,7 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
   \label{fig:structure-types-list}
 \end{figure}
 \paragraph{Comment:} The structure types list shows different types of structures available in the system and allows the superadmin to manage them.
-
+\newpage
 % Roles List
 \begin{figure}[htbp]
   \centering
@@ -1173,7 +1184,7 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
   \label{fig:roles-list}
 \end{figure}
 \paragraph{Comment:} The roles list displays all available user roles and their associated permissions, providing the superadmin with role management capabilities.
-\newpage
+
 
 
 
@@ -1185,7 +1196,7 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
     \label{fig:permissions-list}
   \end{figure}
   \paragraph{Comment:} The screenshot above displays the list of permissions available in the system. These permissions determine the actions and functionalities that can be accessed by different user roles.
-
+  \newpage
   % States List
   \begin{figure}[htbp]
     \centering
@@ -1194,7 +1205,7 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
     \label{fig:states-list}
 \end{figure}
 \paragraph{Comment:} The states list displays all available states and their relevant information, enabling the superadmin to manage state-related data.
-\newpage
+
 
 % Communes List
 \begin{figure}[htbp]
@@ -1204,7 +1215,7 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
   \label{fig:communes-list}
 \end{figure}
 \paragraph{Comment:} The communes list showcases all available communes and their relevant details, allowing the superadmin to manage commune-related data.
-
+\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/services_questions.png}
@@ -1212,7 +1223,7 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
     \label{fig:services-list}
 \end{figure}
 \paragraph{Comment:} The screenshot above displays the Services Questions List, which allows users to view and manage the questions related to various services. It provides an organized interface where superadmin can add, edit, or delete questions to gather necessary information from users. This feature enables efficient data collection and improves the overall user experience.
-\newpage
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{SCREENSHOTS/superadmin/documents_list.png}
@@ -1223,7 +1234,9 @@ By combining Vue.js's interactivity and responsiveness with Laravel's robust bac
 
 \rule{\linewidth}{1pt}
 
-\vspace{1cm}
+
+\newpage
+
 
 \item \textbf{Admin:}
 
