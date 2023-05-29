@@ -74,12 +74,37 @@ Overall, the decision discussions we had during the process of elaborating the U
 At this juncture of conception, our primary focus was on creating a reliable database because a well-designed database is crucial for the efficient functioning of any application, including the virtual counter. We also made sure that accessing the data would be a secure process while also allowing stakeholders to track and store their data effectively.
 
 \subsection{Overview of the database schema}
-//
-\subsection{Explanation of the different tables and their relationships}
-//
+\begin{figure}[H]
+    \centering
+    \includegraphics*[width=0.3\textwidth]{SCREENSHOTS/overall.png}
+    \caption{Overall Database Schema}
+    \label{fig:overall-database-schema}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics*[width=0.5\textwidth]{SCREENSHOTS/states.png}
+    \caption{States Table}
+    \label{fig:states-table}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics*[width=0.5\textwidth]{SCREENSHOTS/structures.png}
+    \caption{Structures Table}
+    \label{fig:structures-table}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics*[width=0.5\textwidth]{SCREENSHOTS/structuretypes.png}
+    \caption{Structure Types Table}
+    \label{fig:structures-types-table}
+\end{figure}
+
 \subsection{Discussion of the design decisions made}
 
-The database for our web application consists of 18 tables, which are designed to store information related to states, communes, structures, structure\_types, centers, services, counters, users, roles, user\_has\_roles, permissions, role\_has\_permissions, appointments, status, questionnaire, documents, question\_doc, and user\_has\_permission.
+The database for our web application consists of 16 tables, which are designed to store information related to states, communes, structures, structure\_types, services, users, roles, user\_has\_roles, permissions, role\_has\_permissions, appointments, questions, documents, questions\_documents, and user\_has\_permissions.
 
 The decision to include these tables was  based on the needs of our application and the data that needs to be stored and managed. For example, tables such as states and communes are  included to help with location-based searches or queries, while tables like users and roles are necessary for managing user access and permissions.
 
