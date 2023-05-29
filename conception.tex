@@ -2,22 +2,22 @@
 \section{Purpose of the chapter}
 The purpose of this chapter is to present the conception of a virtual counter system for the Algerian National Social Security Fund (CNAS). This chapter will provide a detailed explanation of the system design and architecture, database design, as well as the different diagrams and models used during the conception phase. The virtual counter system aims to improve the current management system used by CNAS by providing users with a more efficient and user-friendly way to gather necessary information and book appointments.
 \section {Overview of the topics covered}
-This chapter focuses on the conception of the virtual counter system for CNAS. It includes the analysis and design of the system, from the identification of user requirements to the development of the system architecture and database design. The chapter also includes the presentation of the different diagrams that were created, such as the use case diagram, class diagram, sequence diagram, and flowchart.
+This chapter focuses on the conception of the virtual counter system for CNAS. It includes the analysis and design of the system, from the identification of user requirements to the development of the system architecture and database design. The chapter also includes the presentation of the different diagrams that were created, such as the use case diagram, class diagram.
 The aim of this chapter is to provide a comprehensive understanding of the virtual counter system, its components, and its functionalities.
 
 \section{System design and architecture}
 The system design and architecture of a virtual counter is a crucial aspect in developing a successful web application. It involves designing the components of the system and specifying how they interact with each other to achieve the desired functionality. In the case of a virtual counter for CNAS, the system design and architecture must take into account the different types of users, such as clients and agents, and the various tasks they need to perform. It must also ensure that the application is secure and reliable, with measures in place to protect user data and prevent unauthorized access. The system design and architecture will involve selecting suitable technologies and frameworks, such as Laravel and VueJs, and designing a database schema to store and retrieve data efficiently. Overall, a well-designed system architecture will contribute to the effectiveness and efficiency of the virtual counter and improve the user experience for both clients and agents.
 
 \subsection{Description of the overall system architecture}
-The overall system architecture of the virtual counter for CNAS is designed to be a web-based application with a client-server architecture. The client-side will be a user-friendly interface, developed using Vue.js framework, that allows users to interact with the system and perform different tasks, such as filling in a questionnaire that will generate a checklist of required documents, booking appointments, and checking their status. On the other hand, the server-side of the application will handle all the processing and data storage. It will be developed using the Laravel framework, which is a powerful and reliable PHP web application framework that enables rapid application development with a robust and scalable codebase. The application will also use a MySQL database to store all the necessary data, such as user information, appointment schedules, and queue status. The overall system architecture is designed to be modular and scalable, allowing for easy maintenance and future updates.
+The overall system architecture of the virtual counter for CNAS is designed to be a web-based application with a client-server architecture. The client-side will be a user-friendly interface, developed using Vue.js framework, that allows users to interact with the system and perform different tasks, such as filling in a questionnaire that will generate a checklist of required documents, booking appointments, and checking their status. On the other hand, the server-side of the application will handle all the processing and data storage. It will be developed using the Laravel framework, which is a powerful and reliable PHP web application framework that enables rapid application development with a robust and scalable codebase. The application will also use a MariaDB database to store all the necessary data, such as user information, appointment schedules, and queue status. The overall system architecture is designed to be modular and scalable, allowing for easy maintenance and future updates.
 
 \section{Diagrams illustrating the different components of the system}
 Diagrams can help to provide a visual representation of the different components and processes involved in the virtual counter system, making it easier to understand and communicate to stakeholders.
 
-\medskip The use of UML (Unified Modeling Language) which is a standered Language for visualizing and creating views to illustrate the different parts of a system , presenting us with a various types of diagrams that facilitates the conception phase for the virtual counter and makes it more comprehensive .  
+\medskip The use of UML (Unified Modeling Language) which is a standered Language for visualizing and creating views to illustrate the different parts of a system, presenting us with a various types of diagrams that facilitates the conception phase for the virtual counter and makes it more comprehensive.  
 
 \subsection{Use case diagram}
-Use case diagram is one of the most used static diagrams in UML , it consist on explaining the different actions preformed by the user and helps understanding the main functions that can be preformed by the system.  
+Use case diagram is one of the most used static diagrams in UML, it consist on explaining the different actions preformed by the user and helps understanding the main functions that can be preformed by the system.  
 
 When the user is interacting with the system, the virtual counter enables him to consult the various services provided  by CNAS without the need to log in. 
  
@@ -48,23 +48,7 @@ A class diagram is a type of UML diagram that represents the structure of a syst
     \label{classdiagram}
 \end{figure}
 \newpage
-\subsection{Sequence diagram}
-Sequence diagram in one of the well known dynamic diagrams that allow the overall understanding for the hidden functionalities , and streamlines the developemnt phase . 
 
-\medskip Here are the different diagrams related to every user in the application as well as the registration sytem . 
-  \begin{figure}[H]
-      \centering
-      \includegraphics*[width=0.5\textwidth]{registration_sequence.PNG}
-      \caption{Sequence diagram for Registration}
-      \label{fig:Sequence diagram for Registration}
-  \end{figure}
-  \begin{figure}[H]
-      \centering
-      \includegraphics*[width=0.5\textwidth]{sequence_client.PNG}
-      \caption{Sequence diagram for client interaction}
-      \label{fig:Sequence diagram for Cient Interaction}
-  \end{figure}
- 
 \subsection{Discussion of the design decisions made}
 Overall, the decision discussions we had during the process of elaborating the UML diagrams helped us to refine the system's design and functionality and to ensure that it met the requirements and expectations of both the users and the organization. The final UML diagrams illustrate the system's architecture and behavior in a clear and concise manner, and provide a solid foundation for building a robust and efficient virtual counter system for CNAS.
 
